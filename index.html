@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <script
       src="https://kit.fontawesome.com/c8e4d183c2.js"
       crossorigin="anonymous"
@@ -27,36 +28,101 @@
                   <span class="purple">Treact</span>
                 </figure>
                 <div class="navigation">
-                  <input type="checkbox" class="toggle__menu" />
-                  <div class="hamburger"></div>
-
-                  <ul class="nav__links">
-                    <li>
-                      <a href="#" class="nav__link link__hover--effect">About</a>
-                    </li>
-                    <li>
-                      <a href="#" class="nav__link link__hover--effect">Blog</a>
-                    </li>
-                    <li>
-                      <a href="#" class="nav__link link__hover--effect">Pricing</a>
-                    </li>
-                    <li>
-                      <a href="#" class="nav__link link__hover--effect">Contact Us</a>
-                    </li>
-                    <li>
-                      <a href="#" class="nav__link login__link link__hover--effect">Login</a>
-                    </li>
-                    <li>
-                      <a href="#" class="nav__link--sign-up">Sign Up</a>
-                    </li>
-                  </ul>
+                  <button class="btn__menu" onclick="openMenu()">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="3" y1="12" x2="21" y2="12"></line>
+                      <line x1="3" y1="6" x2="21" y2="6"></line>
+                      <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                  </button>
+                  <div class="menu__backdrop">
+                    <button
+                      class="btn__menu btn__menu--close"
+                      onclick="closeMenu()"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </button>
+                    <ul class="nav__links">
+                      <li class="nav__li">
+                        <a
+                          href="#"
+                          class="nav__link link__hover--effect"
+                          onclick="closeMenu()"
+                          >About</a
+                        >
+                      </li>
+                      <li class="nav__li">
+                        <a
+                          href="#"
+                          class="nav__link link__hover--effect"
+                          onclick="closeMenu()"
+                          >Blog</a
+                        >
+                      </li>
+                      <li class="nav__li">
+                        <a
+                          href="#"
+                          class="nav__link link__hover--effect"
+                          onclick="closeMenu()"
+                          >Pricing</a
+                        >
+                      </li>
+                      <li class="nav__li">
+                        <a
+                          href="#"
+                          class="nav__link link__hover--effect"
+                          onclick="closeMenu()"
+                          >Contact Us</a
+                        >
+                      </li>
+                      <li class="nav__li">
+                        <a
+                          href="#"
+                          class="nav__link login__link link__hover--effect"
+                          onclick="closeMenu()"
+                          >Login</a
+                        >
+                      </li>
+                      <li class="nav__li">
+                        <a
+                          href="#"
+                          class="nav__link--sign-up"
+                          onclick="closeMenu()"
+                          >Sign Up</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </nav>
           </header>
         </div>
         <!-- /* FOR YOU SECTION */ -->
-        <section id="slide__left--to-right">
+        <section>
           <div class="pos__rel">
             <div class="for__you--container">
               <!-- fix from here -->
@@ -666,16 +732,32 @@
                     <h5 class="footer__header">MAIN</h5>
                     <ul class="footer__list">
                       <li class="footer__list-li">
-                        <a href="#" class="footer__link link__hover--effect footer__hover--effect">Blog</a>
+                        <a
+                          href="#"
+                          class="footer__link link__hover--effect footer__hover--effect"
+                          >Blog</a
+                        >
                       </li>
                       <li class="footer__list-li">
-                        <a href="#" class="footer__link link__hover--effect footer__hover--effect">FAQs</a>
+                        <a
+                          href="#"
+                          class="footer__link link__hover--effect footer__hover--effect"
+                          >FAQs</a
+                        >
                       </li>
                       <li class="footer__list-li">
-                        <a href="#" class="footer__link link__hover--effect footer__hover--effect">Support</a>
+                        <a
+                          href="#"
+                          class="footer__link link__hover--effect footer__hover--effect"
+                          >Support</a
+                        >
                       </li>
                       <li class="footer__list-li">
-                        <a href="#" class="footer__link link__hover--effect footer__hover--effect">About Us</a>
+                        <a
+                          href="#"
+                          class="footer__link link__hover--effect footer__hover--effect"
+                          >About Us</a
+                        >
                       </li>
                     </ul>
                   </div>
@@ -683,16 +765,32 @@
                     <h5 class="footer__header">PRODUCT</h5>
                     <ul class="footer__list">
                       <li class="footer__list-li">
-                        <a href="#" class="footer__link link__hover--effect footer__hover--effect">Log In</a>
+                        <a
+                          href="#"
+                          class="footer__link link__hover--effect footer__hover--effect"
+                          >Log In</a
+                        >
                       </li>
                       <li class="footer__list-li">
-                        <a href="#" class="footer__link link__hover--effect footer__hover--effect">Personal</a>
+                        <a
+                          href="#"
+                          class="footer__link link__hover--effect footer__hover--effect"
+                          >Personal</a
+                        >
                       </li>
                       <li class="footer__list-li">
-                        <a href="#" class="footer__link link__hover--effect footer__hover--effect">Business</a>
+                        <a
+                          href="#"
+                          class="footer__link link__hover--effect footer__hover--effect"
+                          >Business</a
+                        >
                       </li>
                       <li class="footer__list-li">
-                        <a href="#" class="footer__link link__hover--effect footer__hover--effect">Team</a>
+                        <a
+                          href="#"
+                          class="footer__link link__hover--effect footer__hover--effect"
+                          >Team</a
+                        >
                       </li>
                     </ul>
                   </div>
@@ -700,16 +798,32 @@
                     <h5 class="footer__header">PRESS</h5>
                     <ul class="footer__list">
                       <li class="footer__list-li">
-                        <a href="#" class="footer__link link__hover--effect footer__hover--effect">Logos</a>
+                        <a
+                          href="#"
+                          class="footer__link link__hover--effect footer__hover--effect"
+                          >Logos</a
+                        >
                       </li>
                       <li class="footer__list-li">
-                        <a href="#" class="footer__link link__hover--effect footer__hover--effect">Events</a>
+                        <a
+                          href="#"
+                          class="footer__link link__hover--effect footer__hover--effect"
+                          >Events</a
+                        >
                       </li>
                       <li class="footer__list-li">
-                        <a href="#" class="footer__link link__hover--effect footer__hover--effect">Stories</a>
+                        <a
+                          href="#"
+                          class="footer__link link__hover--effect footer__hover--effect"
+                          >Stories</a
+                        >
                       </li>
                       <li class="footer__list-li">
-                        <a href="#" class="footer__link link__hover--effect footer__hover--effect">Office</a>
+                        <a
+                          href="#"
+                          class="footer__link link__hover--effect footer__hover--effect"
+                          >Office</a
+                        >
                       </li>
                     </ul>
                   </div>
@@ -717,16 +831,32 @@
                     <h5 class="footer__header">TEAM</h5>
                     <ul class="footer__list">
                       <li class="footer__list-li">
-                        <a href="#" class="footer__link link__hover--effect footer__hover--effect">Career</a>
+                        <a
+                          href="#"
+                          class="footer__link link__hover--effect footer__hover--effect"
+                          >Career</a
+                        >
                       </li>
                       <li class="footer__list-li">
-                        <a href="#" class="footer__link link__hover--effect footer__hover--effect">Founders</a>
+                        <a
+                          href="#"
+                          class="footer__link link__hover--effect footer__hover--effect"
+                          >Founders</a
+                        >
                       </li>
                       <li class="footer__list-li">
-                        <a href="#" class="footer__link link__hover--effect footer__hover--effect">Culture</a>
+                        <a
+                          href="#"
+                          class="footer__link link__hover--effect footer__hover--effect"
+                          >Culture</a
+                        >
                       </li>
                       <li class="footer__list-li">
-                        <a href="#" class="footer__link link__hover--effect footer__hover--effect">Onboarding</a>
+                        <a
+                          href="#"
+                          class="footer__link link__hover--effect footer__hover--effect"
+                          >Onboarding</a
+                        >
                       </li>
                     </ul>
                   </div>
@@ -734,16 +864,32 @@
                     <h5 class="footer__header">LEGAL</h5>
                     <ul class="footer__list">
                       <li class="footer__list-li">
-                        <a href="#" class="footer__link link__hover--effect footer__hover--effect">GDRP</a>
+                        <a
+                          href="#"
+                          class="footer__link link__hover--effect footer__hover--effect"
+                          >GDRP</a
+                        >
                       </li>
                       <li class="footer__list-li">
-                        <a href="#" class="footer__link link__hover--effect footer__hover--effect">Privacy Policy</a>
+                        <a
+                          href="#"
+                          class="footer__link link__hover--effect footer__hover--effect"
+                          >Privacy Policy</a
+                        >
                       </li>
                       <li class="footer__list-li">
-                        <a href="#" class="footer__link link__hover--effect footer__hover--effect">Terms of Service</a>
+                        <a
+                          href="#"
+                          class="footer__link link__hover--effect footer__hover--effect"
+                          >Terms of Service</a
+                        >
                       </li>
                       <li class="footer__list-li">
-                        <a href="#" class="footer__link link__hover--effect footer__hover--effect">Disclaimer</a>
+                        <a
+                          href="#"
+                          class="footer__link link__hover--effect footer__hover--effect"
+                          >Disclaimer</a
+                        >
                       </li>
                     </ul>
                   </div>
@@ -768,23 +914,26 @@
                 <div class="footer__socials--container">
                   <!-- THESE SVGS WORK BUT DONT DISPLAY THE LOGO BIG ENOUGH-->
                   <a href="https://facebook.com" class="footer__socials">
-                    <svg fill="currentColor" viewBox="0 0 24 24">
+                    <svg fill="currentColor" viewBox="0 0 24 24" class="svg__facebook">
                       <path
                         d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"
+                        
                       ></path>
                     </svg>
                   </a>
                   <a href="https://twitter.com" class="footer__socials">
-                    <svg fill="currentColor" viewBox="0 0 24 24">
+                    <svg fill="currentColor" viewBox="0 0 24 24" class="svg__twitter">
                       <path
                         d="M22.162 5.656a8.384 8.384 0 01-2.402.658A4.196 4.196 0 0021.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 00-7.126 3.814 11.874 11.874 0 01-8.62-4.37 4.168 4.168 0 00-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 01-1.894-.523v.052a4.185 4.185 0 003.355 4.101 4.21 4.21 0 01-1.89.072A4.185 4.185 0 007.97 16.65a8.394 8.394 0 01-6.191 1.732 11.83 11.83 0 006.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 002.087-2.165z"
+                        
                       ></path>
                     </svg>
                   </a>
                   <a href="https://youtube.com" class="footer__socials">
-                    <svg fill="currentColor" viewBox="0 0 24 24">
+                    <svg fill="currentColor" viewBox="0 0 24 24" class="svg__youtube">
                       <path
                         d="M21.543 6.498C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.985-.997 1.76-1.938 2.022C17.896 20 12 20 12 20s-5.893 0-7.605-.476c-.945-.266-1.687-1.04-1.938-2.022C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.985.997-1.76 1.938-2.022C6.107 4 12 4 12 4s5.896 0 7.605.476c.945.266 1.687 1.04 1.938 2.022zM10 15.5l6-3.5-6-3.5v7z"
+                        
                       ></path>
                     </svg>
                   </a>
